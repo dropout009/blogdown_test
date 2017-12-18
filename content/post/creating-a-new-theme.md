@@ -1,10 +1,8 @@
 +++
-banner = "banners/placeholder.png"
-categories = ["Lorem"]
-date = "2015-06-24T13:50:46+02:00"
-menu = ""
-tags = []
-title = "Creating a new theme"
+title = "Creating a New Theme"
+description = "Description of my awesome project."
+date = 2014-09-28T02:13:50Z
+author = "Michael Henderson"
 +++
 
 ## Introduction
@@ -941,7 +939,7 @@ $ cat public/index.html
     <h1><a href="http://localhost:1313/post/first-post/">first</a></h1>
 <script>document.write('<script src="http://'
         + (location.host || 'localhost').split(':')[0]
-		+ ':1313/livereload.js?mindelay=10"></'
+        + ':1313/livereload.js?mindelay=10"></'
         + 'script>')</script></body>
 </html>
 ```
@@ -989,8 +987,8 @@ Knowing that hugo is using the slug to generate the file name, the simplest solu
 ```
 $ vi config.toml
 [permalinks]
-	page = "/:title/"
-	about = "/:filename/"
+    page = "/:title/"
+    about = "/:filename/"
 ```
 
 Generate the web site and verify that this didn't work. Hugo lets "slug" or "URL" override the permalinks setting in the configuration file. Go ahead and comment out the slug in content/about.md, then generate the web site to get it to be created in the right place.
@@ -1010,7 +1008,7 @@ $ vi themes/zafta/layouts/partials/header.html
 <!DOCTYPE html>
 <html>
 <head>
-	<title>{{ .Title }}</title>
+    <title>{{ .Title }}</title>
 </head>
 <body>
 :wq

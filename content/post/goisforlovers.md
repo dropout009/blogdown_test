@@ -1,10 +1,15 @@
 +++
-banner = "banners/placeholder.png"
-categories = ["Ipsum"]
-date = "2015-09-17T13:47:08+02:00"
-menu = ""
-tags = []
-title = "Go is for lovers"
+title = "(Hu)go Template Primer"
+description = "(Hu)go Template Primer description."
+tags = [
+    "go",
+    "golang",
+    "templates",
+    "themes",
+    "development",
+]
+date = 2014-04-02T02:13:50Z
+author = "Michael Henderson"
 +++
 
 Hugo uses the excellent [go][] [html/template][gohtmltemplate] library for
@@ -71,7 +76,6 @@ Variables can also be defined and referenced.
     {{ $address := "123 Main St."}}
     {{ $address }}
 
-
 ## Functions
 
 Go template ship with a few functions which provide basic functionality. The go
@@ -96,7 +100,6 @@ the /layout/ directory within Hugo.
 **Example:**
 
     {{ template "chrome/header.html" . }}
-
 
 ## Logic
 
@@ -216,7 +219,6 @@ Could be rewritten as
     Stuff Here
     {{ end }}
 
-
 ## Context (aka. the dot)
 
 The most easily overlooked concept to understand about go templates is that {{ . }}
@@ -231,7 +233,7 @@ instead of depending on the context.
 
       {{ $title := .Site.Title }}
       {{ range .Params.tags }}
-        <li> <a href="{{ $baseurl }}/tags/{{ . | urlize | lower  }}">{{ . }}</a> - {{ $title }} </li>
+        <li> <a href="{{ $baseurl }}/tags/{{ . | urlize }}">{{ . }}</a> - {{ $title }} </li>
       {{ end }}
 
 Notice how once we have entered the loop the value of {{ . }} has changed. We
@@ -278,8 +280,6 @@ Here is the corresponding code inside of the template:
         {{ .TableOfContents }}
         </div>
       {{ end }}
-
-
 
 ## Using Site (config) Parameters
 In your top-level configuration file (eg, `config.yaml`) you can define site
@@ -330,6 +330,5 @@ so, such as in this example:
 </nav>
 ```
 
-
-[go]: <http://golang.org/>
-[gohtmltemplate]: <http://golang.org/pkg/html/template/>
+[go]: <https://golang.org/>
+[gohtmltemplate]: <https://golang.org/pkg/html/template/>
