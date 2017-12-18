@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <copyright>My Name</copyright>
-    <lastBuildDate>Thu, 23 Jul 2015 21:13:14 -0500</lastBuildDate>
+    <lastBuildDate>Mon, 18 Dec 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>purrr &#43; stargazer</title>
+      <link>/2017/12/18/2017-12-18-stargazer/</link>
+      <pubDate>Mon, 18 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/12/18/2017-12-18-stargazer/</guid>
+      <description>モチベーション 論文やレポートに分析結果を綺麗に出力したい 複数の回帰結果をまとめて扱いたい 使用するデータ library(tidyverse) library(gapminder) gapminder = gapminder %&amp;gt;% mutate(pop = as.double(pop)) gapminder ## # A tibble: 1,704 x 6 ## country</description>
+    </item>
     
     <item>
       <title>Hello R Markdown</title>
