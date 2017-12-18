@@ -8,6 +8,7 @@ relativeurls = true
 publishDir = "docs"
 hasCJKLanguage = true
 languageCode = "ja-jp"
+
 [Author]
     name = "My Name"
     profile = "https://google.com/+XXX"
